@@ -22,7 +22,7 @@ function App() {
   }, [postCode])
 
   useEffect(()=>{
-    const smallerDataSet = restaurantData.slice(0, 1);
+    const smallerDataSet = restaurantData.slice(0, 10);
     setFirstTen(smallerDataSet);
   }, [restaurantData])
   

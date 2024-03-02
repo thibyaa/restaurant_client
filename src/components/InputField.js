@@ -3,6 +3,7 @@ const InputField = ({setPostCode}) => {
     const handleChange = (event) => {
         event.preventDefault();
         setPostCode(event.target.postCode.value);
+        event.target.reset();
     }
 
     return ( 
