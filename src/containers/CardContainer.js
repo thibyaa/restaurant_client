@@ -1,10 +1,8 @@
 import Card from '../components/Card';
 
-const CardContainer = ({restaurantData}) => {
+const CardContainer = ({firstTen}) => {
 
-    // splice the data to only show the first 10
-
-    const mapRestaurantData = restaurantData.map((restaurant) => {
+    const mapRestaurantData = firstTen.map((restaurant) => {
         return <Card key={restaurant.id} restaurant={restaurant}/>
     })
 

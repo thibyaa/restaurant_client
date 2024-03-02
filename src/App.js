@@ -1,25 +1,36 @@
 import { useEffect, useState } from 'react';
 import './App.css';
 import CardContainer from'./containers/CardContainer';
+import InputField from './components/InputField';
 
 function App() {
 
   const [restaurantData, setRestaurantData] = useState([]);
+  const [firstTen, setFirstTen] = useState([]);
+  const [postCode, setPostCode] = useState("SW36NP");
 
   useEffect(()=>{
-    const fetchData = async () => {
+    const fetchData = async (postCode) => {
       const response = await fetch(
-       "http://localhost:8010/proxy/discovery/uk/restaurants/enriched/bypostcode/EC4M7RF");
+       "http://localhost:8010/proxy/discovery/uk/restaurants/enriched/bypostcode/" + postCode);
        const jsonData = await response.json();
        setRestaurantData(jsonData.restaurants);
     }
 
-    fetchData();
-  }, [])
+    fetchData(postCode);
+    
+  }, [postCode])
+
+  useEffect(()=>{
+    const smallerDataSet = restaurantData.slice(0, 1);
+    setFirstTen(smallerDataSet);
+  }, [restaurantData])
+  
   
   return (
   <>
-    <CardContainer restaurantData={restaurantData}/>
+    <InputField setPostCode={setPostCode}/>
+    <CardContainer firstTen={firstTen}/>
   </>
   );
 }

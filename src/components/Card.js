@@ -1,19 +1,22 @@
 const Card = (restaurant) => {
+    
+    const availableCuisine = (Object.values(restaurant)[0].cuisines).forEach((cuisines)=>{
+        return <li> {cuisines.name} </li>;
+    })
 
     return ( 
         <>
-        <p> {Object.values(restaurant)[0].name} </p>
+        <h2> {Object.values(restaurant)[0].name} </h2>
 
         {/* there should be a better was to collate this data */}
         <p> {Object.values(restaurant)[0].address.firstLine} </p>
         <p> {Object.values(restaurant)[0].address.city} </p>
         <p> {Object.values(restaurant)[0].address.postalCode} </p>
-        
-        {/* cuisines needs a loop */}
-        <p> {Object.values(restaurant)[0].cuisines[0].name} </p> 
+
+        <ul> {availableCuisine} </ul> 
         
         <p> {Object.values(restaurant)[0].rating.starRating} </p> 
-        <br></br>
+        <hr></hr>
         </>
      );
 }
