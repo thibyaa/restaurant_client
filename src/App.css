@@ -2,3 +2,7 @@
     height: 600px;
     width: 100%;
   }
+
+  body {
+    padding: 50px;
+  }

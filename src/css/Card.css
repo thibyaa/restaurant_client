@@ -1,0 +1,41 @@
+.restaurant_card {
+    margin-top: 25px;
+    margin-bottom: 25px;
+    padding: 30px;
+    border-radius: 15px;
+    cursor: pointer;
+    position: relative;
+    text-align: center;
+    max-width: 300px;
+    border: 10%;
+    border-color: aqua;
+}
+
+.restaurant_card:hover {
+    box-shadow: 5px 5px 2px 1px rgba(211, 84, 0, 0.15);
+    transition: box-shadow .60s;
+}
+
+.restaurant_card > h2 {
+    color: orange;
+}
+
+.restaurant_card > ul {
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.restaurant_card > ul > li {
+    background-color: rgba(230, 126, 34);
+    color: white;
+    width: max-content;
+    height: min-content;
+    padding: 5px;
+    margin: 5px;
+    border-radius: 10px;
+}

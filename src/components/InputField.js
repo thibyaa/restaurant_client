@@ -1,3 +1,5 @@
+import "../css/InputField.css";
+
 const InputField = ({ setPostCode }) => {
   const handleChange = (event) => {
     event.preventDefault();
