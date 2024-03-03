@@ -11,7 +11,7 @@ const Card = ({ cuisines, name, address, rating, logo }) => {
       <img src={logo} alt={name}/>
       <p> {address.firstLine}, {address.city}, {address.postalCode}</p>
       <ul> {availableCuisine} </ul>
-      <p> rating: {rating.starRating} </p>
+      <p> Rating: {rating.starRating} </p>
     </section>
   );
 };
