@@ -2,6 +2,7 @@ import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 
 const Map = ({firstTen, centralCoordinates}) => {
 
+
     const restaurantMarkers = firstTen.map((restaurant)=>{
         return (
         <Marker key={restaurant.id} position={restaurant.address.location.coordinates.sort((a, b)=>(b - a))}>
