@@ -7,8 +7,6 @@
     position: relative;
     text-align: center;
     max-width: 300px;
-    border: 10%;
-    border-color: aqua;
 }
 
 .restaurant_card:hover {

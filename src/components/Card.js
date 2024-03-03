@@ -9,13 +9,8 @@ const Card = ({ cuisines, name, address, rating, logo }) => {
     <section className="restaurant_card">
       <h2> {name.toUpperCase()} </h2>
       <img src={logo} alt={name}/>
-
-      <div className="address">
-        <p> {address.firstLine}, {address.city}, {address.postalCode}</p>
-      </div>
-
+      <p> {address.firstLine}, {address.city}, {address.postalCode}</p>
       <ul> {availableCuisine} </ul>
-
       <p> rating: {rating.starRating} </p>
     </section>
   );
