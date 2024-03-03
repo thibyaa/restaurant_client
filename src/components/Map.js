@@ -1,4 +1,4 @@
-import { MapContainer, TileLayer, useMap, Marker, Popup } from "react-leaflet";
+import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 
 const Map = ({firstTen, centralCoordinates}) => {
 
@@ -8,12 +8,10 @@ const Map = ({firstTen, centralCoordinates}) => {
             <Popup> {restaurant.name} </Popup>
         </Marker>
         );
-    })
-    
-console.log(centralCoordinates);
+    });
 
   return (
-    <MapContainer center={centralCoordinates} zoom={13} scrollWheelZoom={false}>
+    <MapContainer center={centralCoordinates} zoom={13} scrollWheelZoom={true}>
       <TileLayer
         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"

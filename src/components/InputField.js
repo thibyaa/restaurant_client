@@ -6,13 +6,13 @@ const InputField = ({ setPostCode }) => {
   };
 
   return (
-    <>
+    <section className="postal_code_form">
       <h3>Enter Postcode:</h3>
       <form onSubmit={handleChange}>
         <input id="post-code" name="postCode"></input>
         <button> search </button>
       </form>
-    </>
+    </section>
   );
 };
 
