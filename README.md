@@ -9,6 +9,15 @@
 This project uses the Just Eat Takeaway API to create a front-end that renders 10 restaurants based on the postcode inputted.
 
 **Project Aims**
+Minimum Viable Product:
+- Access first 10 restaurants based on postcode input.
+- Each restaurant to hold information on:
+    - Name
+    - Address
+    - Cuisines
+    - Rating
+
+Additional features:
 
 **Diagrams**
 
@@ -16,4 +25,5 @@ This project uses the Just Eat Takeaway API to create a front-end that renders 1
 - JavaScript
 - React 
 - Additional Libraries:
-    - Local Cors Proxy 
+    - Local Cors Proxy -> Bypass CORS configuration 
+    - React-leaflet -> Include map feature

@@ -4,5 +4,8 @@
   }
 
   body {
+    background-image: url(/src/assets/food_burger_pattern.jpg);
+    background-size: 250px;
+    box-shadow: inset 0 0 0 2000px rgba(255, 255, 255, 0.7);
     padding: 50px;
   }

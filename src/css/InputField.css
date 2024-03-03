@@ -2,6 +2,9 @@
     align-items: center;
     display: flex;
     flex-direction: column;
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
 }
 
 .postal_code_form > h3{
