@@ -5,6 +5,7 @@
     cursor: pointer;
     position: relative;
     text-align: center;
+    min-width: 300px;
     max-width: 300px;
     background-color: white;
 }

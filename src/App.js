@@ -33,11 +33,26 @@ function App() {
     setFirstTen(smallerDataSet);
   }, [restaurantData]);
 
+  const router = createBrowserRouter([
+    {
+      path: "/",
+      element: <InputField setPostCode={setPostCode} />,
+    },
+    {
+      path: "search",
+      element: <CardContainer firstTen={firstTen} />,
+      children: [
+        {
+          path: "map",
+          element: <Map firstTen={firstTen} centralCoordinates={centralCoordinates}/>,
+        },
+      ],
+    },
+  ]);
+
   return (
     <section className="home_page">
-      <InputField setPostCode={setPostCode} />
-      <CardContainer firstTen={firstTen} />
-      <Map firstTen={firstTen} centralCoordinates={centralCoordinates}/>
+      <RouterProvider router={router}/>
     </section>
   );
 }

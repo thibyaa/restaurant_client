@@ -1,9 +1,15 @@
 import "../css/InputField.css";
+import { useNavigate } from "react-router-dom";
+import { Outlet } from "react-router-dom";
 
 const InputField = ({ setPostCode }) => {
+
+  const navigate = useNavigate();
+
   const handleChange = (event) => {
     event.preventDefault();
     setPostCode(event.target.postCode.value);
+    navigate("/search/map");
     event.target.reset();
   };
 
@@ -15,6 +21,7 @@ const InputField = ({ setPostCode }) => {
         <hr></hr>
         <button> Find me food </button>
       </form>
+      <Outlet/>
     </section>
   );
 };
