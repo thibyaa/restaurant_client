@@ -9,10 +9,11 @@ const InputField = ({ setPostCode }) => {
 
   return (
     <section className="postal_code_form">
-      <h3>Enter Postcode:</h3>
+      <h3>Enter your postcode</h3>
       <form onSubmit={handleChange}>
         <input id="post-code" name="postCode"></input>
-        <button> search </button>
+        <hr></hr>
+        <button> Find me food </button>
       </form>
     </section>
   );
