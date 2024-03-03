@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import "./App.css";
 import CardContainer from "./containers/CardContainer";
 import InputField from "./components/InputField";
+import Map from "./components/Map";
+
 
 function App() {
   const [restaurantData, setRestaurantData] = useState([]);
@@ -30,6 +32,7 @@ function App() {
     <>
       <InputField setPostCode={setPostCode} />
       <CardContainer firstTen={firstTen} />
+      <Map firstTen={firstTen}/>
     </>
   );
 }

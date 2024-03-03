@@ -7,7 +7,7 @@ const Card = ({ cuisines, name, address, rating }) => {
     <section className="restaurant_card">
       <h2> {name} </h2>
 
-      <div>
+      <div className="address">
         <p> {address.firstLine} </p>
         <p> {address.city} </p>
         <p> {address.postalCode} </p>
@@ -15,7 +15,7 @@ const Card = ({ cuisines, name, address, rating }) => {
 
       <ul> {availableCuisine} </ul>
 
-      <p> {rating.starRating} </p>
+      <p> rating: {rating.starRating} </p>
       <hr></hr>
     </section>
   );
