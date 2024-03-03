@@ -1,16 +1,11 @@
-import Card from '../components/Card';
+import Card from "../components/Card";
 
-const CardContainer = ({firstTen}) => {
+const CardContainer = ({ firstTen }) => {
+  const mapRestaurantData = firstTen.map((restaurant) => {
+    return <Card key={restaurant.id} cuisines={restaurant.cuisines} name={restaurant.name} address={restaurant.address} rating={restaurant.rating}/>;
+  });
 
-    const mapRestaurantData = firstTen.map((restaurant) => {
-        return <Card key={restaurant.id} restaurant={restaurant}/>
-    })
+  return <section>{mapRestaurantData}</section>;
+};
 
-    return ( 
-        <section>
-        {mapRestaurantData}
-        </section>
-     );
-}
- 
 export default CardContainer;

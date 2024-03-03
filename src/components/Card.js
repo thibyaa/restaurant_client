@@ -1,24 +1,24 @@
-const Card = (restaurant) => {
-    
-    const availableCuisine = (Object.values(restaurant)[0].cuisines).forEach((cuisines)=>{
-        return <li> {cuisines.name} </li>;
-    })
+const Card = ({ cuisines, name, address, rating }) => {
+  const availableCuisine = cuisines.map((cuisine, id) => {
+    return <li key={id}> {cuisine.name} </li>;
+  });
 
-    return ( 
-        <>
-        <h2> {Object.values(restaurant)[0].name} </h2>
+  return (
+    <section className="restaurant_card">
+      <h2> {name} </h2>
 
-        {/* there should be a better was to collate this data */}
-        <p> {Object.values(restaurant)[0].address.firstLine} </p>
-        <p> {Object.values(restaurant)[0].address.city} </p>
-        <p> {Object.values(restaurant)[0].address.postalCode} </p>
+      <div>
+        <p> {address.firstLine} </p>
+        <p> {address.city} </p>
+        <p> {address.postalCode} </p>
+      </div>
 
-        <ul> {availableCuisine} </ul> 
-        
-        <p> {Object.values(restaurant)[0].rating.starRating} </p> 
-        <hr></hr>
-        </>
-     );
-}
- 
+      <ul> {availableCuisine} </ul>
+
+      <p> {rating.starRating} </p>
+      <hr></hr>
+    </section>
+  );
+};
+
 export default Card;
