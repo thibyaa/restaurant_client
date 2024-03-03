@@ -9,6 +9,7 @@ function App() {
   const [restaurantData, setRestaurantData] = useState([]);
   const [firstTen, setFirstTen] = useState([]);
   const [postCode, setPostCode] = useState("SW36NP");
+  const [centralCoordinates, setCentralCoordinates] = useState([51.489743, -0.170855]);
 
   useEffect(() => {
     const fetchData = async (postCode) => {
@@ -17,6 +18,7 @@ function App() {
           postCode.trim().toUpperCase()
       );
       const jsonData = await response.json();
+      setCentralCoordinates(jsonData.metaData.location.coordinates.sort((a, b)=>(a - b)).reverse());
       setRestaurantData(jsonData.restaurants);
     };
 
@@ -32,7 +34,7 @@ function App() {
     <>
       <InputField setPostCode={setPostCode} />
       <CardContainer firstTen={firstTen} />
-      <Map firstTen={firstTen}/>
+      <Map firstTen={firstTen} centralCoordinates={centralCoordinates}/>
     </>
   );
 }
