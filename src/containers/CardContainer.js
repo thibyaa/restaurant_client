@@ -1,10 +1,13 @@
 import Card from "../components/Card/Card";
 import Map from "../components/Map/Map";
-import { useLoaderData, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "./CardContainer.css";
 
-const CardContainer = () => {
-  const { centralCoordinates, firstTen } = useLoaderData();
+const CardContainer = ({ centralCoordinates, firstTen, isLoading }) => {
+
+  if(isLoading){
+    return <h1>Loading</h1>
+  }
 
   const mapRestaurantData = firstTen.map((restaurant) => {
     return (
