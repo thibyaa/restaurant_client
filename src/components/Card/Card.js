@@ -7,13 +7,13 @@ const Card = ({ cuisines, name, address, rating, logo }) => {
 
   return (
     <section className="restaurant_card">
-      <h2> {name.toUpperCase()} </h2>
-      <img src={logo} alt={name} />
-      <p>
+      <h2> {name && name.toUpperCase()} </h2>
+      {logo && <img src={logo} alt={name} />}
+      {address && <p>
         {address.firstLine}, {address.city}, {address.postalCode}
-      </p>
+      </p>}
       <ul> {availableCuisine} </ul>
-      <p> Rating: {rating.starRating} </p>
+      <p> Rating: {rating && rating.starRating} </p>
     </section>
   );
 };
