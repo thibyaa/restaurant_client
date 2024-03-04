@@ -24,6 +24,10 @@ Additional features:
 
 **Diagrams**
 
+<img width="420" alt="Card Container" src="https://github.com/thibyaa/restaurant_client/assets/105393816/4a8b4746-607e-4305-ae58-7a158d656d08">
+<img width="425" alt="Landing Container" src="https://github.com/thibyaa/restaurant_client/assets/105393816/de6786fa-8173-4308-92f6-d54ec7dde05d">
+<img width="960" alt="state management diagram" src="https://github.com/thibyaa/restaurant_client/assets/105393816/aec84036-924f-4b6e-bdc2-0216da514527">
+
 **Tech Stack**
 - JavaScript
 - React 
