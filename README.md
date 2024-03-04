@@ -18,6 +18,9 @@ Minimum Viable Product:
     - Rating
 
 Additional features:
+- Error handling for invalid postcodes
+- Implementaion of `React-Router`
+- Implemention of `Leaflet` to display restaurants onto a map
 
 **Diagrams**
 
@@ -26,4 +29,5 @@ Additional features:
 - React 
 - Additional Libraries:
     - Local Cors Proxy -> Bypass CORS configuration 
-    - React-leaflet -> Include map feature
+    - React-leaflet -> Include map feature, improve UX.
+    - React Router -> To improve UI 
