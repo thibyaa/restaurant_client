@@ -3,9 +3,9 @@ import { useLoaderData } from "react-router-dom";
 import Map from "../components/Map";
 import "../css/CardContainer.css";
 
-const CardContainer = ({ centralCoordinates }) => {
+const CardContainer = () => {
 
-  const firstTen = useLoaderData();
+  const {centralCoordinates, firstTen} = useLoaderData();
 
   const mapRestaurantData = firstTen.map((restaurant) => {
     return <Card key={restaurant.id} logo={restaurant.logoUrl} cuisines={restaurant.cuisines} name={restaurant.name} address={restaurant.address} rating={restaurant.rating}/>;
