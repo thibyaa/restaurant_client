@@ -1,0 +1,40 @@
+.restaurant_card {
+  margin: 15px;
+  padding: 30px;
+  border-radius: 15px;
+  cursor: pointer;
+  position: relative;
+  text-align: center;
+  min-width: 300px;
+  max-width: 300px;
+  background-color: white;
+}
+
+.restaurant_card:hover {
+  box-shadow: 5px 5px 2px 1px rgba(211, 84, 0, 1);
+  transition: box-shadow 0.6s;
+}
+
+.restaurant_card > h2 {
+  color: #fb6100;
+}
+
+.restaurant_card > ul {
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.restaurant_card > ul > li {
+  background-color: #fb6100;
+  color: white;
+  width: max-content;
+  height: min-content;
+  padding: 5px;
+  margin: 5px;
+  border-radius: 10px;
+}

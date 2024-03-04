@@ -1,4 +1,4 @@
-import "../css/Card.css";
+import "./Card.css";
 
 const Card = ({ cuisines, name, address, rating, logo }) => {
   const availableCuisine = cuisines.map((cuisine, id) => {
@@ -8,8 +8,10 @@ const Card = ({ cuisines, name, address, rating, logo }) => {
   return (
     <section className="restaurant_card">
       <h2> {name.toUpperCase()} </h2>
-      <img src={logo} alt={name}/>
-      <p> {address.firstLine}, {address.city}, {address.postalCode}</p>
+      <img src={logo} alt={name} />
+      <p>
+        {address.firstLine}, {address.city}, {address.postalCode}
+      </p>
       <ul> {availableCuisine} </ul>
       <p> Rating: {rating.starRating} </p>
     </section>

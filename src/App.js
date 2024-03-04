@@ -1,7 +1,7 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { useState } from "react";
 import CardContainer from "./containers/CardContainer";
-import InputField from "./components/InputField";
+import InputField from "./components/InputField/InputField";
 import "./App.css";
 
 function App() {
@@ -10,7 +10,7 @@ function App() {
   const router = createBrowserRouter([
     {
       path: "/",
-      element: <InputField postCode={postCode} setPostCode={setPostCode} />,
+      element: <InputField setPostCode={setPostCode} />,
     },
     {
       path: "search",

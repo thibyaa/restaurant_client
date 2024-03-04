@@ -1,0 +1,43 @@
+.postal_code_form {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.postal_code_form > h3 {
+  color: rgba(211, 84, 0);
+}
+
+.postal_code_form > form {
+  text-align: center;
+  gap: 10px;
+}
+
+button {
+  margin: 5px;
+  background-color: white;
+  border: 1px solid #d5d9d9;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px 0 rgba(211, 84, 0, 0.15);
+  cursor: pointer;
+  font-size: 13px;
+  line-height: 29px;
+  text-align: center;
+}
+
+.postal_code_form > input {
+  min-width: 400px;
+  min-height: 40px;
+  font-size: 30px;
+  border: 0;
+}
+
+.postal_code_form > hr {
+  border-color: rgba(211, 84, 0);
+  background: rgba(211, 84, 0);
+  border: 0;
+  height: 2px;
+}
