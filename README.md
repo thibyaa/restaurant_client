@@ -31,6 +31,7 @@ Additional features:
 - Overall CSS could be improved
 - CardContainer could be refactored and made reusable 
 - Router to be moved up to index.js
+- Consider shuffling the array before slice so different restaurants are suggested.
 
 **Diagrams**
 
