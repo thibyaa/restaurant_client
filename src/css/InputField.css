@@ -16,7 +16,7 @@
     gap: 10px;
 }
 
-.postal_code_form > form > button {
+.postal_code_form > button {
   margin: 5px;
   background-color: white;
   border: 1px solid #d5d9d9;
@@ -28,14 +28,14 @@
   text-align: center;
 }
 
-.postal_code_form > form > input {
+.postal_code_form > input {
     min-width: 400px;
     min-height: 40px;
     font-size: 30px;
     border: 0;
 }
 
-.postal_code_form > form > hr {
+.postal_code_form > hr {
     border-color: rgba(211, 84, 0);
     background: rgba(211, 84, 0);
     border: 0;

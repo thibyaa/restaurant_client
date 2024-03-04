@@ -1,5 +1,5 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import CardContainer from "./containers/CardContainer";
 import InputField from "./components/InputField";
 import "./App.css";
