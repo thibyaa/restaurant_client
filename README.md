@@ -24,6 +24,14 @@ Additional features:
 - Implementaion of `React-Router`
 - Implemention of `Leaflet` to display restaurants onto a map
 
+**Assumptions/Things that require further clarity**
+- Cuisines includes "Free Delivery", "Deals" etc -> this could be extracted out as opposed to having both cuisines and non-cuisine filters in one, not sure why it's all under on section
+
+**Improvements**
+- Overall CSS could be improved
+- CardContainer could be refactored and made reusable 
+- Router to be moved up to index.js
+
 **Diagrams**
 
 <img width="420" alt="Card Container" src="https://github.com/thibyaa/restaurant_client/assets/105393816/4a8b4746-607e-4305-ae58-7a158d656d08">
