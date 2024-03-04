@@ -1,19 +1,18 @@
 .postal_code_form {
   align-items: center;
+  text-align: center;
+  gap:10px;
   display: flex;
   flex-direction: column;
   background-color: white;
   border-radius: 10px;
-  padding: 20px;
+  padding-top: 160px;
+  margin: 40px;
+  height: 55vh;
 }
 
 .postal_code_form > h3 {
   color: rgba(211, 84, 0);
-}
-
-.postal_code_form > form {
-  text-align: center;
-  gap: 10px;
 }
 
 button {
@@ -32,12 +31,8 @@ button {
   min-width: 400px;
   min-height: 40px;
   font-size: 30px;
-  border: 0;
-}
-
-.postal_code_form > hr {
+  border: 2;
   border-color: rgba(211, 84, 0);
-  background: rgba(211, 84, 0);
-  border: 0;
-  height: 2px;
+  border-radius: 10px;
+  text-align: center;
 }

@@ -21,7 +21,6 @@ const InputField = ({ setPostCode }) => {
       <section className="postal_code_form">
         <h3>Enter your postcode</h3>
         <input id="post-code" name="postCode" onChange={handleChange}></input>
-        <hr></hr>
         <Link to={"/search"}>
           <button
             type="button"

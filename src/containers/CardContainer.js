@@ -1,11 +1,10 @@
 import Card from "../components/Card/Card";
 import Map from "../components/Map/Map";
-import { useLoaderData, useNavigate } from "react-router-dom";
+import { useLoaderData, Link } from "react-router-dom";
 import "./CardContainer.css";
 
 const CardContainer = () => {
   const { centralCoordinates, firstTen } = useLoaderData();
-  const navigate = useNavigate();
 
   const mapRestaurantData = firstTen.map((restaurant) => {
     return (
@@ -20,15 +19,13 @@ const CardContainer = () => {
     );
   });
 
-  const handleClick = () => {
-    navigate("/");
-  };
-
   return (
     <>
-      <button className="back_button" onClick={handleClick}>
+    <Link to="/">
+      <button className="back_button">
         Back
       </button>
+      </Link>
       <section className="card_container">
         {mapRestaurantData}
         <Map firstTen={firstTen} centralCoordinates={centralCoordinates} />
