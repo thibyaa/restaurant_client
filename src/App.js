@@ -10,7 +10,7 @@ function App() {
   const router = createBrowserRouter([
     {
       path: "/",
-      element: <InputField setPostCode={setPostCode} />,
+      element: <InputField postCode={postCode} setPostCode={setPostCode} />,
     },
     {
       path: "search",
