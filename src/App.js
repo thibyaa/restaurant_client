@@ -11,6 +11,7 @@ function App() {
   const { isLoading, data } = useQuery(
     [postCode],
     async () => {
+      console.log("called");
       const response = await fetch(
         "http://localhost:8010/proxy/discovery/uk/restaurants/enriched/bypostcode/" +
           postCode.trim().toUpperCase()
@@ -20,6 +21,7 @@ function App() {
     },
     { staleTime:6.048e+8, retry: 0, refetchOnWindowFocus: false }
   );
+
 
   const router = createBrowserRouter([
     {
@@ -31,6 +33,7 @@ function App() {
       element: (
         <CardContainer
           isLoading={isLoading}
+          postCode={postCode}
           firstTen={data?.restaurants.slice(0, 10)}
           centralCoordinates={data?.metaData.location.coordinates.sort(
             (a, b) => b - a

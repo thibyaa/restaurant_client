@@ -6,5 +6,11 @@
 }
 
 .back_button{
-  
+  background-color: orangered;
+  width: 50px;
+  color: white;
+}
+
+.postcode_results{
+  padding-left: 100px;
 }

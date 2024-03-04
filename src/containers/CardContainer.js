@@ -3,10 +3,14 @@ import Map from "../components/Map/Map";
 import { Link } from "react-router-dom";
 import "./CardContainer.css";
 
-const CardContainer = ({ centralCoordinates, firstTen, isLoading }) => {
-
-  if(isLoading){
-    return <h1>Loading</h1>
+const CardContainer = ({
+  centralCoordinates,
+  firstTen,
+  isLoading,
+  postCode,
+}) => {
+  if (isLoading) {
+    return <h1>Loading</h1>;
   }
 
   const mapRestaurantData = firstTen.map((restaurant) => {
@@ -24,11 +28,15 @@ const CardContainer = ({ centralCoordinates, firstTen, isLoading }) => {
 
   return (
     <>
-    <Link to="/">
-      <button className="back_button">
-        Back
-      </button>
-      </Link>
+      <div className="postcode_results">
+        <h4> restaurants near: </h4>
+        <h2>
+          {postCode} <br/>
+          <Link to="/">
+            <button className="back_button column_a">Back</button>
+          </Link>
+        </h2>
+      </div>
       <section className="card_container">
         {mapRestaurantData}
         <Map firstTen={firstTen} centralCoordinates={centralCoordinates} />
