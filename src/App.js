@@ -11,7 +11,6 @@ function App() {
   const { isLoading, data } = useQuery(
     [postCode],
     async () => {
-      console.log("called");
       const response = await fetch(
         "http://localhost:8010/proxy/discovery/uk/restaurants/enriched/bypostcode/" +
           postCode.trim().toUpperCase()
@@ -44,9 +43,11 @@ function App() {
   ]);
 
   return (
+    <>
     <section className="home_page">
       <RouterProvider router={router} />
     </section>
+    </>
   );
 }
 

@@ -10,7 +10,7 @@ const CardContainer = ({
   postCode,
 }) => {
   if (isLoading) {
-    return <h1>Loading</h1>;
+    return <h1>Food options loading...</h1>;
   }
 
   const mapRestaurantData = firstTen.map((restaurant) => {
@@ -31,15 +31,16 @@ const CardContainer = ({
       <div className="postcode_results">
         <h4> restaurants near: </h4>
         <h2>
-          {postCode} <br/>
+          {postCode.toUpperCase()}
           <Link to="/">
             <button className="back_button column_a">Back</button>
           </Link>
         </h2>
       </div>
+        <Map firstTen={firstTen} centralCoordinates={centralCoordinates} />
+      <h1> SEARCH RESULTS </h1>
       <section className="card_container">
         {mapRestaurantData}
-        <Map firstTen={firstTen} centralCoordinates={centralCoordinates} />
       </section>
     </>
   );

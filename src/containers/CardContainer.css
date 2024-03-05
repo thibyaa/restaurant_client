@@ -13,4 +13,12 @@
 
 .postcode_results{
   padding-left: 100px;
+  display: flex;
+  gap: 25px;
+}
+
+h1 {
+  color: rgba(211, 84, 0, 1);
+  text-align: center;
+  font-size: 35px;
 }
