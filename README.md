@@ -28,10 +28,11 @@ Additional features:
 - Cuisines includes "Free Delivery", "Deals" etc -> this could be extracted out as opposed to having both cuisines and non-cuisine filters in one, not sure why it's all under on section
 
 **Improvements**
-- Overall CSS could be improved
-- CardContainer could be refactored and made reusable 
+- Have filtering options available to load in a different set of restuarants based on customer preferences
+- CSS improvements to be made
+- Link Map Icons to corrosponding card
+- CardContainer to be made reusable 
 - Router to be moved up to index.js
-- Consider shuffling the array before slice so different restaurants are suggested.
 
 **Diagrams**
 
